@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+const LINK_AFILIADO = "https://www.aviasales.com/?marker=694809.Zze0a69a6d4bc64e329bdae5c-694809&locale=pt_BR&currency=BRL";
+
 const ofertas = [
   {
     origem: "São Paulo",
@@ -14,7 +16,7 @@ const ofertas = [
     companhia: "TAP",
     precoOriginal: 4200,
     precoPromocional: 1890,
-    link: "https://aviasales.tpo.lv/gErDrChc"
+    link: LINK_AFILIADO
   },
   {
     origem: "Rio de Janeiro",
@@ -22,7 +24,7 @@ const ofertas = [
     companhia: "Iberia",
     precoOriginal: 5000,
     precoPromocional: 2390,
-    link: "https://aviasales.tpo.lv/gErDrChc"
+    link: LINK_AFILIADO
   },
   {
     origem: "Belo Horizonte",
@@ -30,7 +32,7 @@ const ofertas = [
     companhia: "Air France",
     precoOriginal: 4800,
     precoPromocional: 2190,
-    link: "https://aviasales.tpo.lv/gErDrChc"
+    link: LINK_AFILIADO
   },
   {
     origem: "São Paulo",
@@ -38,16 +40,16 @@ const ofertas = [
     companhia: "LATAM",
     precoOriginal: 3800,
     precoPromocional: 1990,
-    link: "https://aviasales.tpo.lv/gErDrChc"
+    link: LINK_AFILIADO
   }
 ];
 
-// Rota principal (teste)
+// Rota raiz
 app.get("/", (req, res) => {
   res.send("Backend de ofertas rodando 🚀");
 });
 
-// Rota das ofertas
+// Rota de ofertas
 app.get("/ofertas", (req, res) => {
   res.json(ofertas);
 });
