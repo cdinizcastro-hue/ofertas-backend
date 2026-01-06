@@ -7,7 +7,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-const LINK_AFILIADO = "https://www.aviasales.com/?marker=694809.Zze0a69a6d4bc64e329bdae5c-694809&locale=pt_BR&currency=BRL";
+const LINK_AFILIADO =
+  "https://www.aviasales.com.br/?marker=694809.Zze0a69a6d4bc64e329bdae5c-694809";
 
 const ofertas = [
   {
@@ -44,12 +45,10 @@ const ofertas = [
   }
 ];
 
-// Rota raiz
 app.get("/", (req, res) => {
   res.send("Backend de ofertas rodando 🚀");
 });
 
-// Rota de ofertas
 app.get("/ofertas", (req, res) => {
   res.json(ofertas);
 });
