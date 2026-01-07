@@ -1,16 +1,14 @@
 {
   "name": "ofertas-backend",
   "version": "1.0.0",
-  "description": "Backend de ofertas",
+  "description": "Backend de ofertas de viagem",
   "main": "server.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node server.js"
   },
-  "type": "commonjs",
   "dependencies": {
-    "axios": "^1.13.2",
     "cors": "^2.8.5",
-    "express": "^5.2.1",
-    "node-cron": "^4.2.1"
+    "express": "^5.2.1"
   }
 }
