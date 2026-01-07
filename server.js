@@ -39,9 +39,35 @@ app.get("/", (req, res) => {
   res.send("API de Ofertas rodando 🚀");
 });
 
-app.get("/ofertas", (req, res) => {
-  res.json(ofertas);
-});
+app.get('/ofertas', (req, res) => {
+  res.json([
+    {
+      titulo: "Passagem BH → São Paulo",
+      local: "São Paulo - SP",
+      precoEstimado: "A partir de R$ 199",
+      link: "https://klook.tpo.lv/rm2j9v08"
+    },
+    {
+      titulo: "Hotel no Rio de Janeiro",
+      local: "Rio de Janeiro - RJ",
+      precoEstimado: "Diárias com desconto",
+      link: "https://klook.tpo.lv/rm2j9v08"
+    },
+    {
+      titulo: "Passeio em Gramado",
+      local: "Gramado - RS",
+      precoEstimado: "Experiência completa",
+      link: "https://klook.tpo.lv/rm2j9v08"
+    },
+    {
+      titulo: "Atrações em Orlando",
+      local: "Orlando - EUA",
+      precoEstimado: "Ingressos promocionais",
+      link: "https://klook.tpo.lv/rm2j9v08"
+    }
+  ])
+})
+
 
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
